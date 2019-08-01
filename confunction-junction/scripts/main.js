@@ -47,3 +47,21 @@ console.log(sum5)
 
 const sum6 = addAnyNumbers(10000, 2, 3,4,61,6,7)
 console.log(sum6)
+
+// write a function that lets you input as many words as you want and returns all the words added together
+const makeSentence = (...words) => {
+  let sentence = ""
+  words.forEach(word => {
+    sentence += `${word} `
+  })
+  return sentence
+}
+
+const newSentence = makeSentence("The", "answer", "to", "the", "ultimate", "question", "is", "42")
+console.log(newSentence)
+
+// could also have done it this way
+const makeSentence1 = (...words) => words.join(" ")
+
+const newSentence1 = makeSentence1("Kiwi", "is", "the", "cutest")
+console.log(newSentence1)
